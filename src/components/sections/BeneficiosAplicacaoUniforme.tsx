@@ -17,14 +17,14 @@ export function BeneficiosAplicacaoUniforme() {
   return (
     <section className="py-24 bg-ink text-cloud relative z-20 overflow-hidden">
       <div className="max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-16 items-center" ref={revealRef}>
-        <div className="order-2 lg:order-1 relative h-[500px] lg:h-[600px] w-full rounded-2xl overflow-hidden shadow-2xl">
+        <div className="order-2 lg:order-1 relative h-[500px] lg:h-[600px] w-full rounded-2xl overflow-hidden shadow-2xl bg-ink/50">
           <Image 
-            src="/images/Com a tecnologia de pulverização por drones, você garante-✅ Aplicação uniforme✅ Redução de despe.jpg" 
+            src="/images/WhatsApp Image 2026-06-25 at 11.23.09 AM.jpeg" 
             alt="Aplicação uniforme com drone"
             fill
-            className="object-cover"
+            className="object-contain"
           />
-          <div className="absolute inset-0 bg-ink/10 mix-blend-multiply"></div>
+          <div className="absolute inset-0 bg-ink/10 mix-blend-multiply pointer-events-none"></div>
         </div>
 
         <div className="order-1 lg:order-2">

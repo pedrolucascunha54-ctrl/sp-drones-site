@@ -35,15 +35,15 @@ export function DadosDecisao() {
           </div>
         </div>
 
-        <div className="relative h-[400px] lg:h-[600px] w-full rounded-2xl overflow-hidden shadow-2xl">
+        <div className="relative h-[400px] lg:h-[600px] w-full rounded-2xl overflow-hidden shadow-2xl bg-ink/50">
           <Image 
             src="/images/Com a tecnologia de pulverização por drones, você garante-✅ Aplicação uniforme✅ Redução de despe (5).jpg" 
             alt="Tablet com Mapa de Aplicação"
             fill
-            className="object-cover object-top"
+            className="object-contain"
           />
-          <div className="absolute inset-0 bg-ink/20 mix-blend-multiply"></div>
-          <div className="absolute inset-0 bg-gradient-to-t from-ink/60 to-transparent"></div>
+          <div className="absolute inset-0 bg-ink/20 mix-blend-multiply pointer-events-none"></div>
+          <div className="absolute inset-0 bg-gradient-to-t from-ink/60 to-transparent pointer-events-none"></div>
         </div>
       </div>
     </section>

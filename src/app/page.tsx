@@ -13,7 +13,6 @@ import { Sustentabilidade } from "@/components/sections/Sustentabilidade";
 import { DadosDecisao } from "@/components/sections/DadosDecisao";
 import { SobreEquipamento } from "@/components/sections/SobreEquipamento";
 import { AreaAtuacao } from "@/components/sections/AreaAtuacao";
-import { Depoimentos } from "@/components/sections/Depoimentos";
 import { CTAFinal } from "@/components/sections/CTAFinal";
 
 export default function Home() {
@@ -36,7 +35,6 @@ export default function Home() {
         <DadosDecisao />
         <SobreEquipamento />
         <AreaAtuacao />
-        <Depoimentos />
         <CTAFinal />
       </main>
 

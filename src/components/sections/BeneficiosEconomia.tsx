@@ -35,14 +35,14 @@ export function BeneficiosEconomia() {
           </div>
         </div>
 
-        <div className="relative h-[400px] lg:h-[500px] w-full rounded-2xl overflow-hidden shadow-2xl">
+        <div className="relative h-[400px] lg:h-[500px] w-full rounded-2xl overflow-hidden shadow-2xl bg-ink/50">
           <Image 
-            src="/images/Com a tecnologia de pulverização por drones, você garante-✅ Aplicação uniforme✅ Redução de despe (1).jpg" 
+            src="/images/WhatsApp Image 2026-06-25 at 11.23.09 AM.jpeg" 
             alt="Drone pulverizando com economia"
             fill
-            className="object-cover"
+            className="object-contain"
           />
-          <div className="absolute inset-0 bg-ink/10 mix-blend-multiply"></div>
+          <div className="absolute inset-0 bg-ink/10 mix-blend-multiply pointer-events-none"></div>
         </div>
       </div>
     </section>
