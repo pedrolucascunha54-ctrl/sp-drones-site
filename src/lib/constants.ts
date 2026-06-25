@@ -1,0 +1,10 @@
+export const CONTACT_PHONE = "5535910239708";
+export const CONTACT_PHONE_FORMATTED = "(35) 91023-9708";
+export const WHATSAPP_LINK = `https://wa.me/${CONTACT_PHONE}`;
+export const INSTAGRAM_LINK = "https://www.instagram.com/spdrones_pulv/";
+export const INSTAGRAM_HANDLE = "@spdrones_pulv";
+export const ADDRESS = "Lavras, MG"; 
+export const COVERAGE_AREA = "Lavras e região (Sul de Minas Gerais)";
+export const COMPANY_NAME = "SP Drones";
+export const COMPANY_SLOGAN = "Pulverização Aérea Agrícola";
+export const YEAR = new Date().getFullYear();
