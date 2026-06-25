@@ -37,7 +37,7 @@ export function BeneficiosEconomia() {
 
         <div className="relative h-[400px] lg:h-[500px] w-full rounded-2xl overflow-hidden shadow-2xl bg-ink/50">
           <Image 
-            src="/images/WhatsApp Image 2026-06-25 at 11.23.09 AM.jpeg" 
+            src="/images/drone-economia.jpg" 
             alt="Drone pulverizando com economia"
             fill
             className="object-contain"
