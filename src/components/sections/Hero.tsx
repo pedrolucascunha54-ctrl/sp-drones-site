@@ -9,45 +9,30 @@ export function Hero() {
   const revealRef = useScrollReveal();
 
   return (
-    <section id="inicio" className="relative min-h-[90vh] flex items-center pt-24 pb-28 sm:pb-12 overflow-hidden bg-ink">
-      {/* Background Image */}
-      <div className="absolute inset-0 z-0">
-        <Image 
-          src="/images/WhatsApp Image 2026-06-25 at 11.23.09 AM.jpeg" 
-          alt="SP Drones pulverizando lavoura"
-          fill
-          className="object-cover object-center lg:object-right"
-          priority
-        />
-      </div>
-
-      {/* Gradient Overlay: 
-          Mobile: Top to bottom (darker on top via from-ink/95 via-ink/90 to hide baked text)
-          Desktop: Left to right
-      */}
-      <div className="absolute inset-0 z-10 bg-gradient-to-b lg:bg-gradient-to-r from-ink/95 via-ink/90 lg:from-ink/90 lg:via-ink/70 to-ink/10 lg:to-transparent mix-blend-multiply pointer-events-none" />
-      <div className="absolute inset-0 z-10 bg-gradient-to-b lg:bg-gradient-to-r from-ink/95 via-ink/90 lg:from-ink/80 lg:via-ink/40 to-transparent pointer-events-none" />
-
-      {/* Content */}
-      <div className="max-w-7xl mx-auto px-6 grid lg:grid-cols-2 items-center relative z-20 w-full h-full" ref={revealRef}>
-        <div className="flex flex-col items-start max-w-2xl py-12">
-          {/* Eyebrow adapted for dark background */}
-          <SectionEyebrow className="text-warning">Pulverização Aérea Agrícola — Lavras, MG</SectionEyebrow>
+    <section id="inicio" className="relative min-h-[90vh] flex items-center pt-24 pb-20 lg:pb-12 bg-cloud overflow-hidden">
+      <div className="max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-12 items-center relative z-10 w-full" ref={revealRef}>
+        
+        {/* Bloco de Texto (Primeiro no mobile, Esquerda no desktop) */}
+        <div className="flex flex-col items-start max-w-2xl space-y-6 lg:space-y-0">
+          <SectionEyebrow>Pulverização Aérea Agrícola — Lavras, MG</SectionEyebrow>
           
-          <h1 className="text-display-lg sm:text-display-xl text-white mt-3 mb-4 sm:mt-4 sm:mb-6">
+          <h1 className="text-display-lg sm:text-display-xl text-ink lg:mt-4 lg:mb-6">
             Precisão, economia e segurança para sua safra, direto do céu.
           </h1>
           
-          <p className="hidden sm:block text-body-lg text-cloud/90 mb-10 text-shadow-sm">
+          {/* Versão completa (Desktop/Tablet) */}
+          <p className="hidden sm:block text-body-lg text-steel lg:mb-10">
             A SP Drones aplica defensivos e fertilizantes com tecnologia DJI Agras T50, 
             cobrindo grandes áreas com dose certa, no lugar certo — reduzindo desperdício e 
             protegendo quem trabalha na lavoura.
           </p>
-          <p className="block sm:hidden text-body-md text-cloud/90 mb-8 text-shadow-sm">
+          
+          {/* Versão resumida (Mobile) */}
+          <p className="block sm:hidden text-body-md text-steel">
             Aplicação de precisão com drone DJI Agras T50 — menos desperdício, mais segurança.
           </p>
           
-          <div className="flex flex-wrap items-center gap-4 sm:gap-6">
+          <div className="flex flex-wrap items-center gap-4 sm:gap-6 pt-2 lg:pt-0">
             <a 
               href={WHATSAPP_LINK}
               target="_blank"
@@ -56,13 +41,23 @@ export function Hero() {
             >
               Falar no WhatsApp
             </a>
-            <a href="#como-funciona" className="text-body-md sm:text-body-lg font-medium text-white hover:text-cobalt transition-colors focus-visible:outline-warning">
+            <a href="#como-funciona" className="text-body-md sm:text-body-lg font-medium text-ink hover:text-cobalt transition-colors focus-visible:outline-warning">
               Ver como funciona ↓
             </a>
           </div>
         </div>
-        {/* Empty right column to allow the background image to show through */}
-        <div className="hidden lg:block"></div>
+        
+        {/* Bloco da Imagem (Último no mobile, Direita no desktop) */}
+        <div className="relative w-full h-64 sm:h-96 lg:h-[600px] rounded-2xl overflow-hidden shadow-2xl bg-white flex items-center justify-center">
+          <Image 
+            src="/images/drone-hero.jpg" 
+            alt="Drone pulverizando com trator desfocado ao fundo"
+            fill
+            className="object-cover"
+            priority
+          />
+        </div>
+
       </div>
     </section>
   );
