@@ -9,7 +9,7 @@ export function Hero() {
   const revealRef = useScrollReveal();
 
   return (
-    <section id="inicio" className="relative min-h-[90vh] flex items-center pt-24 pb-12 overflow-hidden bg-ink">
+    <section id="inicio" className="relative min-h-[90vh] flex items-center pt-24 pb-28 sm:pb-12 overflow-hidden bg-ink">
       {/* Background Image */}
       <div className="absolute inset-0 z-0">
         <Image 
@@ -22,11 +22,11 @@ export function Hero() {
       </div>
 
       {/* Gradient Overlay: 
-          Mobile: Top to bottom (dark at top for text, clear at bottom for drone)
-          Desktop: Left to right (dark at left for text, clear at right for drone)
+          Mobile: Top to bottom (darker on top via from-ink/95 via-ink/90 to hide baked text)
+          Desktop: Left to right
       */}
-      <div className="absolute inset-0 z-10 bg-gradient-to-b lg:bg-gradient-to-r from-ink/90 via-ink/70 lg:via-ink/60 to-ink/10 lg:to-transparent mix-blend-multiply pointer-events-none" />
-      <div className="absolute inset-0 z-10 bg-gradient-to-b lg:bg-gradient-to-r from-ink/80 via-ink/40 lg:via-ink/30 to-transparent pointer-events-none" />
+      <div className="absolute inset-0 z-10 bg-gradient-to-b lg:bg-gradient-to-r from-ink/95 via-ink/90 lg:from-ink/90 lg:via-ink/70 to-ink/10 lg:to-transparent mix-blend-multiply pointer-events-none" />
+      <div className="absolute inset-0 z-10 bg-gradient-to-b lg:bg-gradient-to-r from-ink/95 via-ink/90 lg:from-ink/80 lg:via-ink/40 to-transparent pointer-events-none" />
 
       {/* Content */}
       <div className="max-w-7xl mx-auto px-6 grid lg:grid-cols-2 items-center relative z-20 w-full h-full" ref={revealRef}>
@@ -34,26 +34,29 @@ export function Hero() {
           {/* Eyebrow adapted for dark background */}
           <SectionEyebrow className="text-warning">Pulverização Aérea Agrícola — Lavras, MG</SectionEyebrow>
           
-          <h1 className="text-display-xl text-white mt-4 mb-6">
+          <h1 className="text-display-lg sm:text-display-xl text-white mt-3 mb-4 sm:mt-4 sm:mb-6">
             Precisão, economia e segurança para sua safra, direto do céu.
           </h1>
           
-          <p className="text-body-lg text-cloud/90 mb-10 text-shadow-sm">
+          <p className="hidden sm:block text-body-lg text-cloud/90 mb-10 text-shadow-sm">
             A SP Drones aplica defensivos e fertilizantes com tecnologia DJI Agras T50, 
             cobrindo grandes áreas com dose certa, no lugar certo — reduzindo desperdício e 
             protegendo quem trabalha na lavoura.
           </p>
+          <p className="block sm:hidden text-body-md text-cloud/90 mb-8 text-shadow-sm">
+            Aplicação de precisão com drone DJI Agras T50 — menos desperdício, mais segurança.
+          </p>
           
-          <div className="flex flex-wrap items-center gap-6">
+          <div className="flex flex-wrap items-center gap-4 sm:gap-6">
             <a 
               href={WHATSAPP_LINK}
               target="_blank"
               rel="noopener noreferrer"
-              className="px-8 py-4 bg-cobalt text-white rounded-full font-bold text-body-lg hover:bg-cobalt-deep transition-all shadow-lg hover:shadow-xl hover:-translate-y-1 focus-visible:outline-warning"
+              className="px-6 py-3 sm:px-8 sm:py-4 bg-cobalt text-white rounded-full font-bold text-body-md sm:text-body-lg hover:bg-cobalt-deep transition-all shadow-lg hover:shadow-xl hover:-translate-y-1 focus-visible:outline-warning"
             >
               Falar no WhatsApp
             </a>
-            <a href="#como-funciona" className="text-body-lg font-medium text-white hover:text-cobalt transition-colors focus-visible:outline-warning">
+            <a href="#como-funciona" className="text-body-md sm:text-body-lg font-medium text-white hover:text-cobalt transition-colors focus-visible:outline-warning">
               Ver como funciona ↓
             </a>
           </div>
